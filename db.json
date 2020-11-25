@@ -1,3 +1,69 @@
 {
-  "productos": []
+  "productos": [
+    {
+      "nombre": "Tequila",
+      "precio": 9990,
+      "id": 1
+    },
+    {
+      "nombre": "Tequila",
+      "precio": 9990,
+      "id": 2
+    },
+    {
+      "nombre": "Tequila",
+      "precio": 10000,
+      "id": 3
+    },
+    {
+      "nombre": "sacate error",
+      "precio": 10101220312,
+      "id": 4
+    },
+    {
+      "nombre": "ATTILIO ANDRES",
+      "precio": 68,
+      "id": 5
+    },
+    {
+      "nombre": "gjhgjhg",
+      "precio": 23456789,
+      "id": 6
+    },
+    {
+      "nombre": "testing1",
+      "precio": 100000,
+      "id": 7
+    },
+    {
+      "nombre": "testing2",
+      "precio": 9999,
+      "id": 8
+    },
+    {
+      "nombre": "Tequila",
+      "precio": 12211231,
+      "id": 9
+    },
+    {
+      "nombre": "Tequila",
+      "precio": 67890,
+      "id": 10
+    },
+    {
+      "nombre": "Tequila",
+      "precio": 67,
+      "id": 11
+    },
+    {
+      "nombre": "testing2",
+      "precio": 123456,
+      "id": 12
+    },
+    {
+      "nombre": "Tequila",
+      "precio": 654,
+      "id": 13
+    }
+  ]
 }

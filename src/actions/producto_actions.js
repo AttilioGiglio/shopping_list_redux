@@ -7,7 +7,10 @@ import {
     DESCARGA_PRODUCTOS_ERROR,
     OBTENER_PRODUCTO_ELIMINAR,
     PRODUCTO_ELIMINADO_EXITO, 
-    PRODUCTO_ELIMINADO_ERROR 
+    PRODUCTO_ELIMINADO_ERROR,
+    OBTENER_PRODUCTO_EDITAR,
+    PRODUCTO_EDITADO_EXITO,
+    PRODUCTO_EDITADO_ERROR  
 } from '../types';
 import clienteAxios from '../config/axios';
 import Swal from 'sweetalert2';
@@ -21,7 +24,7 @@ export function crearNuevoProductoAction(producto){
         dispatch( agregarProducto() );
         try {
             //  insertar producto en la API
-            await clienteAxios.post('/hola', producto);
+            await clienteAxios.post('/productos', producto);
             //  se agrega el producto
             dispatch( agregarProductoExito() );
             // Alerta de exito
@@ -120,4 +123,16 @@ const eliminarProductoExito = () => ({
 const eliminarProductoError = () => ({
     type: PRODUCTO_ELIMINADO_ERROR,
     payload: true
+})
+
+//  Colocar producto en edicion
+export function obtenerProductoEditar(producto) {
+    return (dispatch) => {
+        dispatch( obtenerProductoEditarAction(producto) )
+    }
+}
+
+const obtenerProductoEditarAction = producto => ({
+        type: OBTENER_PRODUCTO_EDITAR,
+        payload: producto
 })
