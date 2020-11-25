@@ -6,13 +6,12 @@ import Productos from './components/productos';
 import EditarProducto from './components/editar_producto';
 // redux
 import { Provider } from 'react-redux';
-import Store from './store'
+import store from './store'
 
 const App = () => {
-const storage = Store();
 return ( 
 <Router>
-<Provider store={storage}>
+<Provider store={store}>
   <Header />
   <div className='container'>
     <Switch>
