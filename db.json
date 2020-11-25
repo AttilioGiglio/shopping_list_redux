@@ -29,6 +29,16 @@
       "nombre": "Tequila",
       "precio": 20000,
       "id": 6
+    },
+    {
+      "nombre": "test2",
+      "precio": 100000,
+      "id": 7
+    },
+    {
+      "nombre": "test3",
+      "precio": 150,
+      "id": 8
     }
   ]
 }
