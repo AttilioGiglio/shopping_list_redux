@@ -125,14 +125,35 @@ const eliminarProductoError = () => ({
     payload: true
 })
 
+
+
 //  Colocar producto en edicion
 export function obtenerProductoEditar(producto) {
     return (dispatch) => {
         dispatch( obtenerProductoEditarAction(producto) )
     }
 }
-
 const obtenerProductoEditarAction = producto => ({
         type: OBTENER_PRODUCTO_EDITAR,
         payload: producto
+})
+
+
+
+// edita un registro en la api y state
+export function editarProductoAction(producto) {
+    return (dispatch) => {
+        dispatch(editarProudcto(producto))
+    }
+    try{
+        const resultado = await clienteAxios.put(`/productos/${producto.id}`, producto);
+        console.log(resultado);
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+const editarProducto = producto => ({
+    type: COMENZAR_EDICION_PRODUCTO,
+    payload: producto
 })
