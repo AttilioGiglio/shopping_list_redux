@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { editarProductoAction } from '../actions/productosActions'
+import { editarProductoAction } from '../actions/producto_actions';
 
 const EditarProducto = () => {
+    
+    // nuevo state de producto 
+    const [ producto, guardarProducto ] = useState({
+        nombre: '',
+        precio: 0
+    });
+    
     // producto a editar
-    const producto = useSelector(state => state.productos);
+    const productoEditar = useSelector(state => state.productos.productoEditar);
     
-    if(!producto) return null;
-    
+    useEffect(() => {
+        guardarProducto(productoEditar);
+    }, [productoEditar])
+
+    // Leer los datos del formulario
+    const onChangeFormulario = e => {
+        guardarProducto({
+            ...producto,
+            [e.target.name] : e.target.value
+        })
+    }
+
     const {nombre, precio, id} = producto;
 
     const submitEditarProducto = e => {
@@ -33,6 +50,7 @@ const EditarProducto = () => {
         placeholder='Nombre Producto'
         name='nombre'
         value={nombre}
+        onChange={onChangeFormulario}
         />
         </div>
          <div className='form-group'>
@@ -43,6 +61,7 @@ const EditarProducto = () => {
         placeholder='Precio Producto'
         name='precio'
         value={precio}
+        onChange={onChangeFormulario}
         />
         </div>
      <button type='submit' className='btn btn-primary font-weight text-uppercase d-block w-100' > Editar </button>
