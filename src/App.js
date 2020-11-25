@@ -4,11 +4,15 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NuevoProducto from './components/nuevo_producto';
 import Productos from './components/productos';
 import EditarProducto from './components/editar_producto';
+// redux
+import { Provider } from 'react-redux';
+import store from './store';
 
 const App = () => {
 
 return (
 <Router>
+<Provider store={store}>
   <Header />
   <div className='container'>
     <Switch>
@@ -18,6 +22,7 @@ return (
               
     </Switch> 
   </div>
+  </Provider>
 </Router>
 );
 }
