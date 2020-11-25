@@ -2,12 +2,7 @@
   "productos": [
     {
       "nombre": "Tequila",
-      "precio": 9990,
-      "id": 1
-    },
-    {
-      "nombre": "Tequila",
-      "precio": 9990,
+      "precio": "9000",
       "id": 2
     },
     {
