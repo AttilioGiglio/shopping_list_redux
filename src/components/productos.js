@@ -13,7 +13,7 @@ const Productos = () => {
         // consultar la API
         const cargarProductos = () => dispatch( obtenerProductosAction() );
         cargarProductos();
-        
+        // eslist-disable-next-line
     }, [])
 
     const productos = useSelector( state => state.productos.productos );
