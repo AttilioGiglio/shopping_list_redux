@@ -1,16 +1,6 @@
 {
   "productos": [
     {
-      "nombre": "Tequila",
-      "precio": "9000",
-      "id": 2
-    },
-    {
-      "nombre": "Tequila",
-      "precio": 10000,
-      "id": 3
-    },
-    {
       "nombre": "sacate error",
       "precio": 10101220312,
       "id": 4
@@ -64,6 +54,21 @@
       "nombre": "Tequila",
       "precio": 167890,
       "id": 14
+    },
+    {
+      "nombre": "probando",
+      "precio": 9999,
+      "id": 15
+    },
+    {
+      "nombre": "ATTILIO ANDRES",
+      "precio": 10000,
+      "id": 16
+    },
+    {
+      "nombre": "ahora si",
+      "precio": 1000,
+      "id": 17
     }
   ]
 }

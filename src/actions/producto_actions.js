@@ -27,7 +27,7 @@ export function crearNuevoProductoAction(producto){
             //  insertar producto en la API
             await clienteAxios.post('/productos', producto);
             //  se agrega el producto
-            dispatch( agregarProductoExito() );
+            dispatch( agregarProductoExito(producto) );
             // Alerta de exito
             Swal.fire(
                 'Correcto',
